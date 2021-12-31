@@ -1,0 +1,30 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+  "id": "6119b6d8-32ea-4db4-9c36-abab3eca999a",
+  "name": "dp-lister-task",
+  "friendlyName": "Dependencies lister",
+  "description": "Find the dependencies used in the project",
+  "helpMarkDown": "",
+  "category": "Utility",
+  "author": "Bhupendra Joshi",
+  "version": {
+      "Major": 0,
+      "Minor": 1,
+      "Patch": 0
+  },
+  "instanceNameFormat": "Echo $(workingDirectory)",
+  "inputs": [
+      {
+          "name": "workingDirectory",
+          "type": "string",
+          "label": "Path to checked out source code",
+          "defaultValue": "",
+          "required": true
+      }
+  ],
+  "execution": {
+      "Node10": {
+          "target": "index.js"
+      }
+  }
+}
